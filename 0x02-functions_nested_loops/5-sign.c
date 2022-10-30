@@ -1,13 +1,29 @@
 #include "main.h"
 
 /**
- * _isalpha- prints all alphabets
- * @c : check for character matching
- * Return: 1 or 0
+ *print_sign- check for real number, add sign
+ *@n : number to checked
+ *Return: 1 or 0 or -1
  */
 
-int _isalpha(int c)
+int print_sign(int n)
 
 {
-	return (c >= 65 && c <= 122);
+	int result;
+
+	if (n > 0)
+	{
+		result = 1;
+		_putchar('+');
+	}
+	else if (n == 0)
+	{
+		result = 0;
+		_putchar('0');
+	}
+	else
+	{
+		result = -1;
+		_putchar('-');								}
+	return (result);
 }
